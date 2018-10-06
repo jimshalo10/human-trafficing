@@ -21,9 +21,9 @@ Please learn from it!
 
 How does it work?
 -----------
-This code makes use of the claudiia https://github.com/claudiajs/claudia package to digest the HTML content of a website and make it available as an object that can be parsed in JSON. The code then looks for all reords from the index table processed and creates a JSON structure that can be inserted into DynamoDB.
+This code makes use of the claudiia https://github.com/claudiajs/claudia package to digest the HTML content of a website and make it available as an object that can be parsed in JSON. The code then looks for all records from the index table processed and creates a JSON structure that can be inserted into DynamoDB.
 
-The code is executed as part of an AWS Lambda function (https://aws.amazon.com/lambda) which can be triggered manually probaly via and Alexa SDK Endpoint if so desired. The Lambda function can be deployed via AWS Serverless Application Model (AWS SAM) templates JSON package.json (see template.yml) for python have been created.
+The code is executed as part of an AWS Lambda function (https://aws.amazon.com/lambda) which can be triggered manually probably via and Alexa SDK Endpoint if so desired. The Lambda function can be deployed via AWS Serverless Application Model (AWS SAM) templates JSON package.json (see template.yml for python) have been created.
 
 
 
@@ -34,13 +34,15 @@ This application makes use of a few 3rd party external dependencies:
 * requests - https://github.com/requests/requests
 * claudiia - https://code.launchpad.net/claudiia
 
-To install the dependencies, run the following command in the root directory of the code:
+To install the dependencies, run the following command in the root directory of the code for python:
 ```bash
 pip install -r requirements.txt -t ./
 ```
 Creating the Human Trafficing Index table
 ==========================================
-aws dynamodb create-table --table-name humantraffic   --attribute-definitions AttributeName=humantrafficid,AttributeType=S   --key-schema AttributeName=humantrafficid,KeyType=HASH   --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1   --region us-east-1   --query TableDescription.TableArn --output text
+
+Open AWS-cli 
+''' $ aws dynamodb create-table --table-name humantraffic   --attribute-definitions AttributeName=humantrafficid,AttributeType=S   --key-schema AttributeName=humantrafficid,KeyType=HASH   --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1   --region us-east-1   --query TableDescription.TableArn --output text'''
 
 resulting dynamodb arn
 ----------------------
@@ -53,19 +55,18 @@ Deploying the Application
 There are three primary ways to deploy this application:
 
 
-1. Use claudia to Deploy Node.js projects to AWS Lambda and API Gateway easily using claudia.js which will make AWS IAM policy and AWS Lambda Function .Create claudia.js
-in AWS-CLI
-
+1. Use claudia to Deploy Node.js projects to AWS Lambda and API Gateway easily using claudia.js which will make AWS IAM policy and AWS Lambda Function. Create claudia.js
+in AWS-cli.
 
 $ claudia create --region us-east-1 --api-module index --policies policy
 
 
 2. Use the AWS SAM CLI - https://github.com/awslabs/aws-sam-cli via python pip
+   $ aws cloudformation package --template template.yml --s3-bucket humantraffic --output-template template-export.yml
 
-$ aws cloudformation package --template template.yml --s3-bucket humantraffic --output-template template-export.yml
 
-
-3. Deploy via the AWS Serverless Application repository: https://aws.amazon.com/serverless/serverlessrepo/
+3. Deploy via the AWS Serverless Application repository:
+   https://aws.amazon.com/serverless/serverlessrepo/
 
 
 Creating and deploying
@@ -109,7 +110,7 @@ output all items in the tracking data in human-Trafficing table
 
 curl  "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
-open a new tab in the browser paste the url 
+open a new tab in the browser paste the url, inside url. 
 
 
 https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic
