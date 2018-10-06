@@ -97,6 +97,8 @@ In this case we use the curl package so we can log the output
 List all people
 ===============
 output all items in the tracking data in human-Trafficing table
+
+
 curl "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
 Add a person
@@ -112,12 +114,12 @@ output all items in the tracking data in human-Trafficing table
 
 curl  "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
-open a new tab in the browser paste the url, inside url. 
+Open a new tab in the browser paste the url, inside quotes. 
 
 
 https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic
 
-the initial output with one entry is 
+The initial output with one entry is 
 [{"name":"Fernando","humantrafficid":"258"}]
 
 
