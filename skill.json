@@ -1,0 +1,17 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Human Trafficking and Modern Slavery Tracking"
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

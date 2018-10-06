@@ -1,0 +1,126 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "human trafficking tracker",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "humanTrafficIntent",
+          "slots": [
+            {
+              "name": "ageGroup",
+              "type": "ageGroupsTypes"
+            },
+            {
+              "name": "genderGroup",
+              "type": "genderGroupType"
+            }
+          ],
+          "samples": [
+            "give a list of all {ageGroup}",
+            "give a list of all {genderGroup}",
+            "I want list of all {genderGroup}",
+            "I want list of all {ageGroup}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "cheap labour",
+                "synonyms": [
+                  "debt labour",
+                  "child labour",
+                  "forced labour",
+                  "bonded labour",
+                  "debt bondage"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "forced child marriage"
+              }
+            },
+            {
+              "name": {
+                "value": "child exploited slavery"
+              }
+            },
+            {
+              "name": {
+                "value": "Decendant child slavery "
+              }
+            }
+          ],
+          "name": "harmTypes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "adults",
+                "synonyms": [
+                  "pensioners"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "children",
+                "synonyms": [
+                  "vulnerable"
+                ]
+              }
+            }
+          ],
+          "name": "ageGroupsTypes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "male",
+                "synonyms": [
+                  "boys",
+                  "men"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "female",
+                "synonyms": [
+                  "girls",
+                  "women"
+                ]
+              }
+            }
+          ],
+          "name": "genderGroupType"
+        }
+      ]
+    }
+  }
+}

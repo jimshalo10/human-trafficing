@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "human-trafficking-executor",
+    "name": "human-trafficking",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "x4hvcqcf5h",
+    "module": "index"
+  }
+}
