@@ -128,7 +128,7 @@ When taking advantage of dynamoDB add an extra record to list any extra infomati
 [{"name":"Fernando","humantrafficid":"258"},{"humantrafficid":"128","name":"Rene","Street":"Spilsby Road","lastName":"Gujaran","town":"Boston","Country birth":"Mexico","building":"The Mill Apartments","zip code":"MA1 234","state":"MA"}]
 
 
-Now anyone through out the world can read this, but only you can update this table with curl command above from the AWS-cli
+Now anyone through out the world can read this in a browser, but only you can update this table with curl command above from the AWS-cli. The generated code is protected by using a non-root credentials.
 
 Add a person
 =============
