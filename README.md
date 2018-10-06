@@ -62,6 +62,8 @@ $ claudia create --region us-east-1 --api-module index --policies policy
 
 
 2. Use the AWS SAM CLI - https://github.com/awslabs/aws-sam-cli via python pip
+
+
    $ aws cloudformation package --template template.yml --s3-bucket humantraffic --output-template template-export.yml
 
 
