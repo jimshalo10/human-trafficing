@@ -1,7 +1,7 @@
-Human Trafficing Index
+Human Trafficking Index
 ==============================================
 
-This AWS Serverless Application views of the people at risk of Human Trafficing  listed here and stores it in an Amazon DynamoDB Table.
+This AWS Serverless Application views of the people at risk of Human Trafficking  listed here and stores it in an Amazon DynamoDB Table.
 
 This application was created as part of a demo for the "Build on Serverless | Alexa and Serverless Apps - How to Hack for Good" 
 
@@ -38,7 +38,7 @@ To install the dependencies, run the following command in the root directory of 
 ```bash
 pip install -r requirements.txt -t ./
 ```
-Creating the Human Trafficing Index table
+Creating the Human Trafficking Index table
 ==========================================
 
 Open AWS-cli 
@@ -81,8 +81,8 @@ The resulting output is the api is below remember to add all AWS IAM Api policy 
 apigateway.createDeployment     restApiId=j4yjmke3ll   
 {
   "lambda": {
-    "role": "human-Trafficing-executor",
-    "name": "human-Trafficing",
+    "role": "human-Trafficking-executor",
+    "name": "human-Trafficking",
     "region": "us-east-1"
   },
   "api": {
@@ -96,7 +96,7 @@ In this case we use the curl package so we can log the output
 
 List all people
 ===============
-output all items in the tracking data in human-Trafficing table
+output all items in the tracking data in human-Trafficking table
 
 
 curl "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
@@ -110,7 +110,7 @@ Testing deployment in a browser
 ===============================
 
 This is really very simmple open the browser and list all the people
-output all items in the tracking data in human-Trafficing table
+output all items in the tracking data in human-Trafficking table
 
 curl  "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
