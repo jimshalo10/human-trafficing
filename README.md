@@ -123,7 +123,8 @@ The initial output with one entry is
 [{"name":"Fernando","humantrafficid":"258"}]
 
 
-When taking advantage of dynamoDB add an extra record to list any extra infomation we get, this is becomes
+When taking advantage of dynamoDB add an extra record to list any extra infomation we get, this is becomes humantraffic index table has been fully populated an item being shown below is the largest entry
+
 
 [{"name":"Fernando","humantrafficid":"258"},{"humantrafficid":"128","name":"Rene","Street":"Spilsby Road","lastName":"Gujaran","town":"Boston","Country birth":"Mexico","building":"The Mill Apartments","zip code":"MA1 234","state":"MA"}]
 
