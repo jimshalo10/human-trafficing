@@ -5,10 +5,10 @@ Resources:
   Parser:
     Type: 'AWS::Serverless::Function'
     Properties:
-      # replace with your path for the s3 table for python users have to do dynamodb:Create table
+      # replace with your path for the s3 table for nodejs8.10 users have to do dynamodb:Create table
       CodeUri: s3://human-trafficking
       Handler: index.handler
-      Runtime: python2.7
+      Runtime: nodejs8.10
       Timeout: 120
       MemorySize: 512
       Policies:

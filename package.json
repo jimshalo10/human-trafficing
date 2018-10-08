@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package": "aws cloudformation package --template-file template.yaml --output-template-file output.yaml --s3-bucket s3-lambda-humantrafficking",
+    "deploy": "aws cloudformation deploy --template-file output.yaml --stack-name s3-lambda-save-dynamodb --capabilities CAPABILITY_IAM --parameter-overrides TableName=$npm_package_config_table_name",
+    "qd": "npm run package && npm run deploy"
+  },
+  "config": {
+    "table_name": "humantrafficking"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "jimbo10 <jims.halo10@hotmail.co.uk>",
+  "license": "MIT"
   "dependencies": {
     "aws-sdk": "^2.328.0",
     "claudia-api-builder": "^4.1.1"
