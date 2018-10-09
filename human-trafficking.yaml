@@ -11,4 +11,3 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 3
-      Role: 'arn:aws:iam::549511673151:role/human-trafficking-executor'

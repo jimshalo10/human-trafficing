@@ -78,7 +78,7 @@ $ claudia create --region us-east-1 --api-module index --policies policy
 
 The resulting output is the api is below remember to add all AWS IAM Api policy to your user account or this will fail 
 
-apigateway.createDeployment     restApiId=j4yjmke3ll   
+apigateway.createDeployment     restApiId=3qt51ctp55   
 {
   "lambda": {
     "role": "human-Trafficking-executor",
@@ -86,11 +86,23 @@ apigateway.createDeployment     restApiId=j4yjmke3ll
     "region": "us-east-1"
   },
   "api": {
-    "id": "j4yjmke3ll",
+    "id": "3qt51ctp55",
     "module": "index",
-    "url": "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest"
+    "url": "https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
   }
 }
+
+
+Cloud Formation State
+=====================
+{
+   "StackId": "arn:aws:cloudformation:us-east-1:549511673151:stack/aws-serverless-repository-alexa-skills-kit-nodejs-factskillhumantrafic/1f6c5910-cc04-11e8-8258-500c2893c036",
+   "StackName": "aws-serverless-repository-alexa-skills-kit-nodejs-factskillhumantrafic",
+   "TemplateDescription": "Demonstrate a basic fact skill built with the ASK NodeJS SDK",
+   "CreationTime": "2018-10-09T20:44:31.505Z",
+   "LastUpdatedTime": "2018-10-09T20:44:39.011Z",
+   "StackStatus": "CREATE_COMPLETE"
+ }
 
 In this case we use the curl package so we can log the output
 
@@ -99,11 +111,11 @@ List all people
 output all items in the tracking data in human-Trafficking table
 
 
-curl "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
+curl "https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
 Add a person
 =============
- curl -H "Content-Type: application/json" -X POST -d '{"humantrafficId":"123", "name":"Rene Gujan"}' https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic
+ curl -H "Content-Type: application/json" -X POST -d '{"humantrafficId":"123", "name":"Rene Gujan"}' https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic
 
 
 Testing deployment in a browser
@@ -112,12 +124,12 @@ Testing deployment in a browser
 This is really very simmple open the browser and list all the people
 output all items in the tracking data in human-Trafficking table
 
-curl  "https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
+curl  "https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic"
 
 Open a new tab in the browser paste the url, inside quotes. 
 
 
-https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic
+https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic
 
 The initial output with one entry is 
 [{"name":"Fernando","humantrafficid":"258"}]
