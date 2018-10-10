@@ -97,10 +97,20 @@ Cloud Formation State
 =====================
 {
    "StackId": "arn:aws:cloudformation:us-east-1:549511673151:stack/aws-serverless-repository-alexa-skills-kit-nodejs-factskillhumantrafic/1f6c5910-cc04-11e8-8258-500c2893c036",
+
+
    "StackName": "aws-serverless-repository-alexa-skills-kit-nodejs-factskillhumantrafic",
-   "TemplateDescription": "Demonstrate a basic fact skill built with the ASK NodeJS SDK",
+
+
+   "TemplateDescription": "Demonstrate human traffic Index built with the ASK NodeJS SDK",
+
+
    "CreationTime": "2018-10-09T20:44:31.505Z",
-   "LastUpdatedTime": "2018-10-09T20:44:39.011Z",
+
+
+   "LastUpdatedTime": "2018-10-09T20:44:39.011Z GMT `15:44:39.0112 EST" ,
+
+
    "StackStatus": "CREATE_COMPLETE"
  }
 
