@@ -145,7 +145,7 @@ Now anyone through out the world can read this in a browser, but only you can up
 
 Add a person
 =============
- curl -H "Content-Type: application/json" -X POST -d '{"humantrafficId":"123", "name":"Rene Gujan"}' https://x4hvcqcf5h.execute-api.us-east-1.amazonaws.com/latest/humantraffic
+ curl -H "Content-Type: application/json" -X POST -d '{"humantrafficId":"123", "name":"Rene Gujan"}' https://3qt51ctp55.execute-api.us-east-1.amazonaws.com/latest/humantraffic
 
 
 Alexa connection
